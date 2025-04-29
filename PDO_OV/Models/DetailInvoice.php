@@ -11,12 +11,12 @@ class DetailInvoice
         $this->db = $conexionDb->obtenerConexion();
     }
 
-   
+    
     public function insertDetailsInvoice($data)
     {
         $query = "INSERT INTO detalles_factura 
                 (nro_factura, cod_prod, cantidad, valor_prod, valor_impuesto, valor_total) 
-              VALUES 
+                VALUES 
                 (:nro_factura, :cod_prod, :cantidad, :valor_prod, :valor_impuesto, :valor_total)";
 
         $statement = $this->db->prepare($query);
