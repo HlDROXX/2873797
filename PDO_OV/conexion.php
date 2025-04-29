@@ -3,7 +3,7 @@
     {
         private $host = "localhost";
         private $usuario = "root";
-        private $password = "password123";
+        private $password = "";
         private $db = "2873797_adso";
         private $conexion;
 

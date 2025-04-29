@@ -1,5 +1,6 @@
 <?php
-require_once '../conexion.php';
+require_once(__DIR__ . '/../conexion.php');
+
 
 class Sale
 {
@@ -47,11 +48,11 @@ class Sale
     public function getSaleHeader($nro_invoice)
     {
         $query = "SELECT v.nro_factura, v.fecha_venta, c.nombre_cliente, e.nombre_empleado, t.descripcion AS tipo_venta
-              FROM ventas_empleado v
-              JOIN clientes c ON v.id_cliente = c.id_cliente
-              JOIN empleados e ON v.id_empleado = e.id_empleado
-              JOIN tipos_venta t ON v.id_tipo_venta = t.id_tipo_venta
-              WHERE v.nro_factura = :nro_factura";
+                FROM ventas_empleado v
+                JOIN clientes c ON v.id_cliente = c.id_cliente
+                JOIN empleados e ON v.id_empleado = e.id_empleado
+                JOIN tipos_venta t ON v.id_tipo_venta = t.id_tipo_venta
+                WHERE v.nro_factura = :nro_factura";
 
         $statement = $this->db->prepare($query);
         $statement->bindParam(":nro_factura", $nro_invoice);
@@ -62,9 +63,9 @@ class Sale
     public function getSaleDetails($nro_invoice)
     {
         $query = "SELECT p.nombre_prod, d.cantidad, d.valor_prod, d.valor_impuesto, d.valor_total
-              FROM detalles_factura d
-              JOIN productos p ON d.cod_prod = p.cod_prod
-              WHERE d.nro_factura = :nro_factura";
+                FROM detalles_factura d
+                JOIN productos p ON d.cod_prod = p.cod_prod
+                WHERE d.nro_factura = :nro_factura";
 
         $statement = $this->db->prepare($query);
         $statement->bindParam(":nro_factura", $nro_invoice);
