@@ -42,13 +42,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-    <?php include '../navbar.php' ?>
-
     <div class="container">
         <div class="header">
-            <h1>Subir Empleado</h1>
+            <h1>Crear Empleado</h1>
         </div>
-        <div class="card">
+        <?php include '../navbar.php' ?>
+        <div class="formulario-crear">
             <form action="" method="POST" class="card-form">
                 <div class="input-field">
                     <label for="nombre">Nombre</label>
