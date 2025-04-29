@@ -1,15 +1,26 @@
 :root {
-    --color-primario: #cb7beb;       /* Azul indigo */
-    --color-secundario: #1f2937;     /* Púrpura */
-    --color-acento: #10b981;         /* Verde esmeralda */
-    --color-exito: #2291c5;          /* Verde éxito */
-    --color-peligro: #ef4444;        /* Rojo alerta */
-    --color-body: #111827;           /* Gris oscuro fondo */
-    --color-fondo-claro: #1f2937;    /* Fondo tarjetas */
-    --color-borde: #374151;          /* Gris medio */
-    --color-texto: #e5e7eb;          /* Gris claro texto */
-    --color-alerta: #facc15;         /* Amarillo */
-    --color-popup-negro: #  0f172a;    /* Popup más oscuro */
+    --color-primario: #cb7beb;
+    /* Azul indigo */
+    --color-secundario: #1f2937;
+    /* Púrpura */
+    --color-acento: #10b981;
+    /* Verde esmeralda */
+    --color-exito: #2291c5;
+    /* Verde éxito */
+    --color-peligro: #ef4444;
+    /* Rojo alerta */
+    --color-body: #111827;
+    /* Gris oscuro fondo */
+    --color-fondo-claro: #1f2937;
+    /* Fondo tarjetas */
+    --color-borde: #374151;
+    /* Gris medio */
+    --color-texto: #e5e7eb;
+    /* Gris claro texto */
+    --color-alerta: #facc15;
+    /* Amarillo */
+    --color-popup-negro: # 0f172a;
+    /* Popup más oscuro */
     --radius: 12px;
     --sombra: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
@@ -19,7 +30,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: var(--color-body);
 }
 
@@ -31,7 +43,7 @@ body{
     margin: 20px;
 }
 
-.navbar > a,
+.navbar>a,
 .dropbtn {
     background-color: var(--color-primario);
     color: white;
@@ -45,7 +57,7 @@ body{
     cursor: pointer;
 }
 
-.navbar > a:hover,
+.navbar>a:hover,
 .dropdown:hover .dropbtn {
     background-color: #10b981;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -150,6 +162,28 @@ body{
     gap: 12px;
     margin-top: 24px;
     justify-content: center;
+}
+
+.input-field select {
+    padding: 12px 16px;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #1A252F;
+    color: var(--color-texto);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    appearance: none;
+    /* Quita el estilo feo del navegador */
+}
+
+.input-field select::placeholder {
+    color: rgba(255, 0, 0, 0.767);
+}
+
+.input-field select:focus {
+    border-color: var(--color-acento);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
 }
 
 .card-form-buttons .btn {

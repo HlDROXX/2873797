@@ -160,6 +160,25 @@ h1 {
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
 }
 
+
+.input-field textarea {
+    padding: 12px 16px;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #1A252F;
+    color: var(--color-texto);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    resize: vertical; /* permite solo agrandar hacia abajo */
+    min-height: 100px; /* opcional: para que no sea muy chiquito */
+}
+
+.input-field textarea:focus {
+    border-color: var(--color-acento);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
 .card-form-buttons {
     display: flex;
     gap: 12px;
