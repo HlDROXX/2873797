@@ -1,5 +1,5 @@
 <?php
-require_once '../conexion.php';
+require_once '../../conexion.php';
 
 class Sale
 {
@@ -118,6 +118,23 @@ class Sale
         $statement = $this->db->prepare($query);
         $statement->bindParam(":nro_factura", $nro_invoice);
         return $statement->execute();
+    }
+
+    public function generar_nro_factura()
+    {
+        $sql = "SELECT MAX(nro_factura) AS ultimoNumero FROM ventas_empleado";
+        $consul = $this->db->prepare($sql);
+        $consul->execute();
+        $resultado = $consul->fetch();
+
+        $ultimoNumero = isset($resultado['ultimoNumero']) ? $resultado['ultimoNumero'] : 'FACT-0';
+        $ultimoNumeroSolo = (int) str_replace('VNT-', '', $ultimoNumero);
+
+        $nuevoNumero = $ultimoNumeroSolo + 1;
+
+        $nroFactura = "VNT-" . $nuevoNumero;
+
+        return $nroFactura;
     }
 }
 ?>

@@ -9,7 +9,8 @@ if ($id <= 0) {
 }
 
 $productModel = new Sale();
-$sale = $productModel->getSale($id);
+$saleGet = $productModel->getSale($id);
+$sale = $saleGet[0];
 
 if (empty($sale)) {
     header("Location: list.php?error=Venta no encontrado.");

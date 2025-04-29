@@ -19,6 +19,8 @@ $clients = $clientModel->getAllClients();
 $employees = $employeeModel->getAllEmployees();
 $salesType = $saleTypeModel->getAllSalesType();
 
+$nroFactura = $saleModel->generar_nro_factura();
+
 if (!isset($_SESSION["carrito"])) {
     $_SESSION["carrito"] = [];
 }
@@ -49,7 +51,7 @@ if (isset($_POST['agregar'])) {
     }
 }
 if (isset($_POST['guardar'])) {
-    $nro_factura = trim($_POST["nro_factura"]);
+    $nro_factura = $nroFactura;
     $id_cliente = trim($_POST["id_cliente"]);
     $id_empleado = trim($_POST["id_empleado"]);
     $id_tipo_venta = trim($_POST["id_tipo_venta"]);
@@ -64,7 +66,7 @@ if (isset($_POST['guardar'])) {
         }
 
         $ventaData = [
-            "nro_factura" => $nro_factura,
+            "nro_factura" => $nroFactura,
             "id_cliente" => $id_cliente,
             "id_empleado" => $id_empleado,
             "id_tipo_venta" => $id_tipo_venta,
@@ -81,7 +83,7 @@ if (isset($_POST['guardar'])) {
                 $total = $subtotal + $iva;
 
                 $detalleData = [
-                    "nro_factura" => $nro_factura,
+                    "nro_factura" => $nroFactura,
                     "cod_prod" => $item["cod_prod"],
                     "cantidad" => $item["cantidad"],
                     "valor_prod" => $item["precio"],
@@ -125,7 +127,7 @@ if (isset($_POST['guardar'])) {
 
                 <div class="input-field">
                     <label for="nro_factura">Número de Factura</label>
-                    <input type="text" id="nro_factura" name="nro_factura">
+                    <input type="text" id="nro_factura" name="nro_factura" value="<?= $nroFactura ?>" readonly>
                 </div>
 
                 <div class="input-field">
