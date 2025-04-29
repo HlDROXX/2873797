@@ -26,18 +26,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <head>
     <meta charset="UTF-8">
-    <title>Crear Estado</title>
+    <title>Crear Método</title>
     <link rel="stylesheet" href="../../../styles/principal.css">
     <link rel="stylesheet" href="../../../styles/base.css">
 </head>
 
 <body>
-    <div class="header">
-        <h1>Crear Estado</h1>
-    </div>
-    <?php include '../../navbar.php' ?>
     <div class="container">
-        <div class="card">
+        <div class="header">
+            <h1>Crear Método</h1>
+        </div>
+        <?php include '../../navbar.php' ?>
+
+        <div class="formulario-crear    ">
             <form action="" method="POST" class="card-form">
                 <div class="input-field">
                     <label for="descripcion">Nombre</label>

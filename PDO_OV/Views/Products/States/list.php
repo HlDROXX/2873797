@@ -16,12 +16,11 @@ $listStates = $stateModel->getAllStates();
 </head>
 
 <body>
-    <?php include '../../navbar.php' ?>
-
     <div class="container">
         <div class="header">
             <h1>Lista de Estados</h1>
         </div>
+        <?php include '../../navbar.php' ?> 
         <a href="create.php" class="add-btn">Agregar Estado</a>
         <div class="card">
             <table class="table">
@@ -40,8 +39,7 @@ $listStates = $stateModel->getAllStates();
                                 <td><?= $state['nombre_estado'] ?></td>
                                 <td>
                                     <a href="edit.php?id=<?= $state['id_estado']; ?>" class="btn btn-editar">Editar</a>
-                                    <a href="delete.php?id=<?= $state['id_estado']; ?>"
-                                        class="btn btn-eliminar">Eliminar</a>
+                                    <a href="delete.php?id=<?= $state['id_estado']; ?>" class="btn btn-eliminar">Eliminar</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
