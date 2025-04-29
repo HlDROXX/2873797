@@ -13,12 +13,11 @@
 </head>
 
 <body>
-  <?php include 'navbar.php' ?>
-
-  <header class="main-header">
-    <h1><i class="fas fa-chart-line"></i> Panel General</h1>
+<header class="main-header">
+    <h1><i class="fas fa-chart-line"></i> Dashboard</h1>
     <p>Visión rápida del estado actual del negocio</p>
   </header>
+  <?php include 'navbar.php' ?>
 
   <section class="summary-grid">
     <a href="<?= BASE_URL ?>Employees/create.php">

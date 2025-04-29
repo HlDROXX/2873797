@@ -13,15 +13,15 @@ $listEmployees = $employeeModel->getAllEmployees();
     <title>Lista de Empleados</title>
     <link rel="stylesheet" href="../../styles/principal.css">
     <link rel="stylesheet" href="../../styles/base.css">
+    <link rel="stylesheet" href="../../styles/test.css">
 </head>
 
 <body>
-    <?php include '../navbar.php' ?>
-
     <div class="container">
         <div class="header">
             <h1>Lista de Empleados</h1>
         </div>
+        <?php include '../navbar.php' ?>
         <div class="card">
             <table class="table">
                 <thead>

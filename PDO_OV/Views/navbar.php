@@ -1,11 +1,13 @@
 <?php
-    define('BASE_URL', '/2873797/PDO_OV/Views/')
-?>
+define('BASE_URL', '/2873797/PDO_OV/Views/')
+    ?>
 
 <div class="navbar">
-    <a href="<?= BASE_URL ?>home.php">Inicio</a>
     <div class="dropdown">
-        <button class="dropbtn">Empleados
+    <button onclick="window.location.href='/2873797/PDO_OV/Views/home.php'" class="dropbtn">Inicio</button>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Empleados   
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">

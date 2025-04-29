@@ -16,12 +16,11 @@ $listClients = $ClientModel->getAllClients();
 </head>
 
 <body>
-    <?php include '../navbar.php' ?>
-
     <div class="container">
         <div class="header">
             <h1>Lista de Clientes</h1>
         </div>
+        <?php include '../navbar.php' ?>
         <div class="card">
             <table class="table">
                 <thead>
@@ -44,8 +43,7 @@ $listClients = $ClientModel->getAllClients();
                                 <td>
                                     <a href="view.php?id=<?= $client['id_cliente']; ?>" class="btn btn-ver">Ver</a>
                                     <a href="edit.php?id=<?= $client['id_cliente']; ?>" class="btn btn-editar">Editar</a>
-                                    <a href="delete.php?id=<?= $client['id_cliente']; ?>"
-                                        class="btn btn-eliminar">Eliminar</a>
+                                    <a href="delete.php?id=<?= $client['id_cliente']; ?>" class="btn btn-eliminar">Eliminar</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

@@ -16,12 +16,13 @@ $listProducts = $productModel->getAllProducts();
 </head>
 
 <body>
-    <?php include '../navbar.php' ?>
-
     <div class="container">
         <div class="header">
             <h1>Lista de Productos</h1>
         </div>
+        <?php include '../navbar.php' ?>
+
+
         <div class="card">
             <table class="table">
                 <thead>
@@ -47,10 +48,8 @@ $listProducts = $productModel->getAllProducts();
                                 <td><?= $product["nombre_estado"] ?></td>
                                 <td>
                                     <a href="view.php?id=<?= $product['cod_prod']; ?>" class="btn btn-ver">Ver</a>
-                                    <a href="edit.php?id=<?= $product['cod_prod']; ?>"
-                                        class="btn btn-editar">Editar</a>
-                                    <a href="delete.php?id=<?= $product['cod_prod']; ?>"
-                                        class="btn btn-eliminar">Eliminar</a>
+                                    <a href="edit.php?id=<?= $product['cod_prod']; ?>" class="btn btn-editar">Editar</a>
+                                    <a href="delete.php?id=<?= $product['cod_prod']; ?>" class="btn btn-eliminar">Eliminar</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

@@ -16,12 +16,13 @@ $listaVentas = $ventaModelo->getAllSales();
 </head>
 
 <body>
-    <?php include '../navbar.php' ?>
-
     <div class="container">
         <div class="header">
             <h1>Lista de Ventas</h1>
         </div>
+        <?php include '../navbar.php' ?>
+
+
         <div class="card">
             <table class="table">
                 <thead>
@@ -46,7 +47,8 @@ $listaVentas = $ventaModelo->getAllSales();
                                 <td>
                                     <a href="view.php?id=<?= $sale['nro_factura']; ?>" class="btn btn-ver">Ver</a>
                                     <a href="edit.php?id=<?= $sale['nro_factura']; ?>" class="btn btn-editar">Editar</a>
-                                    <a href="../pdf.php?id=<?= $sale['nro_factura'] ?>" class="btn btn-eliminar" target="_blank">Factura</a>
+                                    <a href="../pdf.php?id=<?= $sale['nro_factura'] ?>" class="btn btn-eliminar"
+                                        target="_blank">Factura</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
