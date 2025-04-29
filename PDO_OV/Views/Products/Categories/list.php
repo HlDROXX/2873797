@@ -16,12 +16,13 @@ $listCategory = $categoryModel->getAllCategories();
 </head>
 
 <body>
-    <?php include '../../navbar.php' ?>
-
     <div class="container">
         <div class="header">
             <h1>Lista de Categorias</h1>
         </div>
+        <?php include '../../navbar.php' ?>
+
+
         <a href="create.php" class="add-btn">Agregar Categoria</a>
         <div class="card">
             <table class="table">

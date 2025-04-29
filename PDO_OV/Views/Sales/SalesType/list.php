@@ -21,7 +21,7 @@ $listaTiposVenta = $tipoVentaModelo->getAllSalesType();
             <h1>Métodos de pago</h1>
         </div>
         <?php include '../../navbar.php' ?>
-        <a href="create.php" class="add-btn">Agregar Tipo Venta</a>
+        <a href="create.php" class="add-btn">Agregar Método de Pago</a>
         <div class="card">
             <table class="table">
                 <thead>
