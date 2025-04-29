@@ -1,0 +1,26 @@
+ #sidebar {
+     min-width: 250px;
+     max-width: 250px;
+     min-height: 100vh;
+     background: #44556d;
+     color: white;
+ }
+
+ .nav-link {
+     color: white;
+     cursor: pointer;
+     padding: 10px;
+ }
+
+
+ .nav-link:focus {
+     color: white;
+ }
+
+ .nav-link:hover {
+     background-color: #10b981;
+     border-radius: 10px;
+     color: white;
+     transition-duration: 0.5s;
+
+ }
