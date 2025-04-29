@@ -39,10 +39,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="container">
         <div class="header">
-            <h1>Subir Cliente</h1>
+            <h1>Crear Cliente</h1>
         </div>
         <?php include '../navbar.php' ?>
-        <div class="card">
+        <div class="formulario-crear">
             <form action="" method="POST" class="card-form">
                 <div class="input-field">
                     <label for="identidad">Numero de Identidad</label>

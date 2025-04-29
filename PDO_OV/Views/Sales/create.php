@@ -113,14 +113,12 @@ if (isset($_POST['guardar'])) {
 </head>
 
 <body>
-    <?php include '../navbar.php' ?>
-
     <div class="container">
         <div class="header">
             <h1>Crear Venta</h1>
         </div>
-
-        <div class="card">
+        <?php include '../navbar.php' ?>
+        <div class="formulario-crear">
             <form action="" method="POST" class="card-form">
 
                 <div class="input-field">
@@ -159,7 +157,7 @@ if (isset($_POST['guardar'])) {
                 </div>
 
                 <hr>
-
+                <br>          
                 <h3>Agregar Producto</h3>
                 <div class="input-field">
                     <label for="cod_prod">Producto</label>

@@ -32,12 +32,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
+    <div class="header">
+        <h1>Crear Estado</h1>
+    </div>
     <?php include '../../navbar.php' ?>
-
     <div class="container">
-        <div class="header">
-            <h1>Subir Estado</h1>
-        </div>
         <div class="card">
             <form action="" method="POST" class="card-form">
                 <div class="input-field">
