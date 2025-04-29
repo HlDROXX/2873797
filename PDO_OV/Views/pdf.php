@@ -46,7 +46,7 @@ $pdf->Cell(50, 10, 'Factura No.: ' . $header['nro_factura'], 0, 1);
 $pdf->Cell(50, 10, 'Fecha: ' . $header['fecha_venta'], 0, 1);
 $pdf->Cell(50, 10, 'Cliente: ' . $header['nombre_cliente'], 0, 1);
 $pdf->Cell(50, 10, 'Empleado: ' . $header['nombre_empleado'], 0, 1);
-$pdf->Cell(50, 10, 'Tipo de Venta: ' . $header['tipo_venta'], 0, 1);
+$pdf->Cell(50, 10, 'Metodo de pago: ' . $header['tipo_venta'], 0, 1);
 
 $pdf->Ln(10);
 
