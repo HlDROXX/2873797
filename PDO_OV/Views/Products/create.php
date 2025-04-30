@@ -85,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <label for="id_categoria">Categoría</label>
                         <select name="id_categoria" id="id_categoria" class="form-select" required>
                             <option value="">Selecciona una categoría</option>
-                            <?php foreach ($categorias as $categoria): ?>
+                            <?php foreach ($categories as $categoria): ?>
                                 <option value="<?= $categoria['id_categoria'] ?>">
                                     <?= $categoria['nombre_categoria'] ?>
                                 </option>
@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <label for="id_estado">Estado Producto</label>
                         <select name="id_estado" id="id_estado" class="form-select" required>
                             <option value="">Selecciona un estado</option>
-                            <?php foreach ($estados as $estado): ?>
+                            <?php foreach ($states as $estado): ?>
                                 <option value="<?= $estado['id_estado'] ?>">
                                     <?= $estado['nombre_estado'] ?>
                                 </option>
