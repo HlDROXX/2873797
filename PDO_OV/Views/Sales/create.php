@@ -123,7 +123,8 @@ if (isset($_POST['guardar'])) {
 
                 <div class="input-field">
                     <label for="nro_factura">Número de Factura</label>
-                    <input type="text" id="nro_factura" name="nro_factura">
+                    <input type="text" id="nro_factura" name="nro_factura"
+                        value="<?= htmlspecialchars($_POST['nro_factura'] ?? '') ?>">
                 </div>
 
                 <div class="input-field">
@@ -131,7 +132,9 @@ if (isset($_POST['guardar'])) {
                     <select name="id_cliente" id="id_cliente">
                         <option value="">Selecciona el cliente</option>
                         <?php foreach ($clients as $cliente): ?>
-                            <option value="<?= $cliente["id_cliente"] ?>"><?= $cliente["nombre_cliente"] ?></option>
+                            <option value="<?= $cliente["id_cliente"] ?>" <?= (isset($_POST['id_cliente']) && $_POST['id_cliente'] == $cliente["id_cliente"]) ? 'selected' : '' ?>>
+                                <?= $cliente["nombre_cliente"] ?>
+                            </option>
                         <?php endforeach; ?>
                     </select>
                 </div>
@@ -141,23 +144,28 @@ if (isset($_POST['guardar'])) {
                     <select name="id_empleado" id="id_empleado">
                         <option value="">Selecciona el empleado</option>
                         <?php foreach ($employees as $empleado): ?>
-                            <option value="<?= $empleado["id_empleado"] ?>"><?= $empleado["nombre_empleado"] ?></option>
+                            <option value="<?= $empleado["id_empleado"] ?>" <?= (isset($_POST['id_empleado']) && $_POST['id_empleado'] == $empleado["id_empleado"]) ? 'selected' : '' ?>>
+                                <?= $empleado["nombre_empleado"] ?>
+                            </option>
                         <?php endforeach; ?>
                     </select>
+
                 </div>
 
                 <div class="input-field">
                     <label for="id_tipo_venta">Tipo de Venta</label>
                     <select name="id_tipo_venta" id="id_tipo_venta">
-                        <option value="">Selecciona el tipo de sale</option>
+                        <option value="">Selecciona el tipo de venta</option>
                         <?php foreach ($salesType as $tipo): ?>
-                            <option value="<?= $tipo["id_tipo_venta"] ?>"><?= $tipo["descripcion"] ?></option>
+                            <option value="<?= $tipo["id_tipo_venta"] ?>" <?= (isset($_POST['id_tipo_venta']) && $_POST['id_tipo_venta'] == $tipo["id_tipo_venta"]) ? 'selected' : '' ?>>
+                                <?= $tipo["descripcion"] ?>
+                            </option>
                         <?php endforeach; ?>
                     </select>
                 </div>
 
                 <hr>
-                <br>          
+                <br>
                 <h3>Agregar Producto</h3>
                 <div class="input-field">
                     <label for="cod_prod">Producto</label>
